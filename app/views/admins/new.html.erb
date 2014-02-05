@@ -1,0 +1,30 @@
+<h1>Add user informatiom</h1>
+<%= form_for @user, url:admins_path,:html => {:multipart => true} do |f| %>
+  
+<div><%= f.label :Name %><br />
+  <%= f.text_field :name %></div>
+  
+<div><%= f.label :Address %><br />
+  <%= f.text_field :address%></div>
+
+<div><%= f.label :Contact_number %><br />
+  <%= f.telephone_field :contact_no %></div>
+
+<div><%= f.label :email %><br />
+  <%= f.email_field :email, :autofocus => true %></div>
+
+<div><%= f.label :password %><br/>
+  <%= f.password_field :password %></div>
+
+<div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+<div><%= f.label :salary %><br />
+  <%= f.text_field :basic_salary %></div>
+
+
+<div><%=f.submit %></div>
+
+<%end%>
+
+

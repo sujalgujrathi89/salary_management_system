@@ -1,6 +1,12 @@
 SalaryManagementSystem::Application.routes.draw do
-  devise_for :users 
-
+  devise_for :users #,:controllers => {:confirmations =>"confirmations"} #,:controllers => {:sessions =>"sessions"}
+  resources :users do
+    resources :leaves
+    resources :salaries
+  end
+  resources :admins
+ 
+  match "users/:id/activate" => "users#activate", :as => "active_user",via:[:post,:get] 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

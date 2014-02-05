@@ -1,0 +1,18 @@
+<div>
+  <strong>Name:</strong>
+  <%= current_user.name %>
+</div>
+ 
+<div>
+  <strong>Address:</strong>
+  <%= current_user.address %>
+</div>
+<div>
+  <strong>Contact_Number:</strong>
+  <%= current_user.contact_no%>
+</div>
+<div>
+  <strong>Email:</strong>
+  <%= current_user.email%>
+</div>
+<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>

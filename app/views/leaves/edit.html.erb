@@ -1,0 +1,24 @@
+<h1>Update Leaves</h1>
+
+<%= form_for @leave, url:user_leafe_path( @user.id, @leave.id) , method: :patch  do |f| %> 
+ 
+ <div date-date-formate ="dd-mm-yyyy">
+     <%= f.label :To %>
+     <%=f.text_field :start_date,:id=>"dp" %></div> 
+     <span class= "add-on"><i class="icon-th"></i></span>
+      
+     <div  date-date-formate ="dd-mm-yyyy">
+     <%= f.label :From %>
+     <%=f.text_field :end_date,:id=>"dp1"%></div> 
+    <span class= "add-on"><i class="icon-th"></i></span>
+
+    <%= f.submit %>
+<%end%>
+
+
+ <script>
+  $(function() {
+   $('#dp').datepicker({ format: "yyyy-mm-dd" });
+   $('#dp1').datepicker({ format: "yyyy-mm-dd" });
+ });     
+  </script>

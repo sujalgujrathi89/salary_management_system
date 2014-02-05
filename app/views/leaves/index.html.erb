@@ -1,0 +1,22 @@
+<h3>All Leaves</h3>
+
+<table border="1px solid">
+<tr>
+<td class="common">User name</td>
+<td class="common">Start date</td>
+<td class="common">End date</td>
+</tr>
+
+<% @leave.each do |l| %>
+<tr>
+  <td><%= l.user.name %></td>
+  <td><%= l.start_date.strftime("%Y-%m-%d") %></td>
+  <td><%= l.end_date.strftime("%Y-%m-%d") %></td>
+ 
+  <td><%= link_to 'Edit',  edit_user_leafe_path(params[:user_id], l) %></td>
+  <td><%= link_to 'Destroy',user_leafe_path(params[:user_id], l), method: :delete %></td>
+  <td><%= link_to 'leave', leave_count_user_leafe_path(params[:user_id],l)%>
+  
+  </tr>
+  <%end%>
+  </table>

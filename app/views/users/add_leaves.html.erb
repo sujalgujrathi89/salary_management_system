@@ -1,0 +1,24 @@
+<h2>Add Leaves</h2>
+
+<%= form_for @leave, url:create_leaves_user_path(params[:id]) do |f| %>
+
+     <div date-date-formate ="dd-mm-yyyy">
+     <%= f.label :To %>
+     <%=f.text_field :start_date,:id=>"dp" %></div> 
+     <span class= "add-on"><i class="icon-th"></i></span>
+      
+     <div  date-date-formate ="dd-mm-yyyy">
+     <%= f.label :From %>
+     <%=f.text_field :end_date,:id=>"dp1"%></div> 
+    <span class= "add-on"><i class="icon-th"></i></span>
+
+    <%= f.submit %>
+<%end%>
+<%= link_to 'Back', edit_user_path %><br>
+
+ <script>
+  $(function() {
+   $('#dp').datepicker({ format: "yyyy-mm-dd" });
+   $('#dp1').datepicker({ format: "yyyy-mm-dd" });
+ });     
+  </script>

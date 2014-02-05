@@ -1,7 +1,6 @@
 <h1> Welcome To Salary Management System</h1>
-<% if user_signed_in? %>
- <%= current_user %>
-  <%= link_to 'Sign_out',destroy_user_session_path, :method => :delete%>
-<%else%>
-  <%= link_to 'Sign_in',user_session_path%>
-<% end%>  
+  <% if signed_in? %>
+  <%= link_to 'Sign Out',destroy_user_session_path, :method => :delete%><br>
+  <% else%> 
+  <%= link_to 'Sign_In',user_session_path%><br>
+  <%end%>
