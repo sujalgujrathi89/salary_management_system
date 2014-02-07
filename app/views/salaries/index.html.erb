@@ -1,0 +1,16 @@
+<h3>salary of all user</h3>
+
+<table border="1px solid">
+  <tr>
+    <td>Name</td>
+    <td>Salary</td>
+  </tr>
+  <tr>
+    <% @salary.each do |salary| %>
+      <td>salary.user.name</td>
+      <td>salary.generated_salary</td>
+    <%end%>
+  </tr>
+</table>    
+  
+

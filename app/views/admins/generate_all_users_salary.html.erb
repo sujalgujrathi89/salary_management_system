@@ -1,0 +1,18 @@
+<h3>salary of all user</h3>
+
+<table class="salary_table">
+  <tr>
+    <td class="table_padding">Name</td>
+    <td class="table_padding">Salary</td>
+    <td class="table_padding">Current Month Salary</td>
+  </tr>
+  
+    <%@salaries.each do |salary| %>
+      <tr>
+      <td class="table_padding"><%=salary.user.name%></td>
+      <td class="table_padding"><%=salary.total_salary%></td>
+      <td class="table_padding"><%=salary.generated_salary%></td>
+      </tr>
+    <%end%>
+  
+</table>    
